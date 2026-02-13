@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Nature</title>
+    <style>
+        /* Basic reset and minimal styles for structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1e2b2e;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Simple section spacing */
+        section {
+            padding: 60px 0;
+        }
+        .hero {
+            background: #e9f3f0; /* light nature tone */
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero .subhead {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-item {
+            background: #f8faf9;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .testimonial {
+            background: #d4e6e0;
+            text-align: center;
+            font-style: italic;
+            padding: 60px 20px;
+        }
+        .testimonial blockquote {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        .testimonial cite {
+            font-size: 1.1rem;
+            font-style: normal;
+            font-weight: bold;
+        }
+        .about {
+            background: #fff;
+        }
+        .footer {
+            background: #1e2b2e;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .footer h2 {
+            margin-bottom: 20px;
+        }
+        /* image placeholders */
+        .img-placeholder {
+            background: #b8d9d0;
+            height: 200px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e2b2e;
+            font-size: 0.9rem;
+        }
+        /* basic nav */
+        nav {
+            background: #1e2b2e;
+            color: white;
+            padding: 1rem 0;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Navigation (inferred, as not in provided text) -->
+    <nav>
+        <div class="container">
+            <div class="logo">🌿 Love Nature</div>
+            <div>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <p class="we-all-love">we all love</p>
+            <h1>nature</h1>
+            <p class="subhead">Look deep into nature, and you will understand everything better.</p>
+            <!-- Image placeholder for hero visual -->
+            <div class="img-placeholder" style="max-width: 800px; margin: 30px auto 0;">[Hero Image Placeholder]</div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section>
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="img-placeholder">[Web Design Icon/Image]</div>
+                    <h3>Web Design</h3>
+                    <p>Focus on how you can help and benefit your user. Use simple words so that you don't confuse people.</p>
+                </div>
+                <div class="service-item">
+                    <div class="img-placeholder">[Graphic Design Icon/Image]</div>
+                    <h3>Graphic Design</h3>
+                    <p>Focus on how you can help and benefit your user. Use simple words so that you don't confuse people.</p>
+                </div>
+                <div class="service-item">
+                    <div class="img-placeholder">[Content Creation Icon/Image]</div>
+                    <h3>Content Creation</h3>
+                    <p>Focus on how you can help and benefit your user. Use simple words so that you don't confuse people.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="container">
+            <blockquote>
+                “Original and with an innate understanding of their customer’s needs, the team at Love Nature are always a pleasure to work with.”
+            </blockquote>
+            <cite>— Jane Miller</cite>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="container">
+            <h2>ABOUT US</h2>
+            <h3 style="margin: 20px 0 10px;">Tell website visitors who you are and why they should choose your business.</h3>
+            <p style="max-width: 800px;">Because when a visitor first lands on your website, you're a stranger to them. They have to get to know you in order to want to read your blog posts, subscribe to your email newsletter, or buy what you're selling.</p>
+            <!-- Image placeholder for about section -->
+            <div class="img-placeholder" style="margin-top: 30px;">[About Image Placeholder]</div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer class="footer">
+        <div class="container">
+            <h2>QUESTIONS?</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">Whether you’re curious about features, a free trial, or even press, we’re here to answer any questions.</p>
+            <!-- Button placeholder -->
+            <div style="background: #3b5e4b; display: inline-block; padding: 12px 30px; border-radius: 30px; color: white; font-weight: bold;">Contact Us</div>
+        </div>
+    </footer>
+</body>
+</html>
