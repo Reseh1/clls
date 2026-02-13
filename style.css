@@ -1,0 +1,355 @@
+/* style.css - Love Nature Theme */
+
+/* ---------- CSS Reset & Base Styles ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #2d3e3f;
+    background-color: #ffffff;
+}
+
+/* ---------- Nature Color Palette ---------- */
+:root {
+    --primary-dark: #1e3c3b;      /* deep forest */
+    --primary-medium: #2b5e5b;    /* pine */
+    --primary-light: #4f9b94;     /* sage */
+    --accent: #d9b650;            /* warm sand/amber */
+    --bg-light: #f2f7f5;          /* soft mint */
+    --bg-white: #ffffff;
+    --text-dark: #1e2b2e;
+    --text-soft: #4a5c5e;
+    --gray-light: #e9f0ee;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--primary-dark);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    text-transform: lowercase;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--text-soft);
+    margin-bottom: 1rem;
+}
+
+/* ---------- Utility Classes ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    background: var(--primary-dark);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #d4e8e2 100%);
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero p:first-child {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--primary-medium);
+    margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.hero .subhead {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-dark);
+}
+
+.img-placeholder {
+    background: linear-gradient(145deg, #b8d9d0, #9fc0b6);
+    height: 200px;
+    border-radius: 12px;
+    margin: 30px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    max-width: 900px;
+}
+
+/* ---------- Services Section ---------- */
+section {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-item {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(79, 155, 148, 0.1);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(43, 94, 91, 0.12);
+}
+
+.service-item .img-placeholder {
+    height: 140px;
+    margin: 0 0 20px 0;
+    background: linear-gradient(135deg, #cde3dd, #aed2c7);
+}
+
+.service-item h3 {
+    color: var(--primary-medium);
+}
+
+/* ---------- Testimonial Section ---------- */
+.testimonial {
+    background: var(--primary-medium);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 40px 0;
+}
+
+.testimonial blockquote {
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    color: white;
+}
+
+.testimonial cite {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--accent);
+}
+
+/* ---------- About Section ---------- */
+.about {
+    background: var(--bg-white);
+}
+
+.about h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about h3 {
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+    max-width: 700px;
+    margin: 20px 0 15px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+.about .img-placeholder {
+    height: 300px;
+    background: linear-gradient(145deg, #c1dbd2, #a3c5b9);
+    margin-top: 40px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.footer h2 {
+    color: white;
+}
+
+.footer h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+}
+
+.footer p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 20px auto 30px;
+}
+
+.footer .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.footer .btn:hover {
+    background: #c9a23b;
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-links a {
+        margin: 0 10px;
+    }
+    
+    .hero {
+        padding: 60px 20px;
+    }
+    
+    h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    h2, .about h3 {
+        text-align: center;
+    }
+    
+    .about p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* ---------- Image Placeholder Styling (for demo, replace with real images) ---------- */
+.img-placeholder {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #1e3c3b;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(255,255,255,0.3);
+}
